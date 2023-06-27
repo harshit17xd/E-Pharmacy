@@ -1,0 +1,121 @@
+
+n = input("Enter Your Name: ")
+print("Hii" , n )
+print("Welcome to our E-Pharmacy")
+print("Wish you are doing well!!")
+input("Enter any key to proceed  ")
+
+
+
+print("Tell me your Symptoms >>")
+print("A:Fever")
+print("B:Sneezing")
+print("C:Headache with felling of heaviness in head")
+print("D:Coughing With Mucoid expectorent")
+print("E:Dry Cough which increases at night")
+print("F: Throat pain when swallowing or talking")
+print("G:Vomitting or Nausea")
+print("H: Abdominal Pain at Periumbilical Region")
+print("I : Abdominal Pain at Epigastric region")
+print("J: Pain at Sinus(Frontal/Ethmoid/Maxillary")
+print("K: Persistent One Sided headache increases at strong light / Stress/ Hyper acidity/ Loud noise")
+print("L: Bodyache with Malaise")
+print("M: Cramping Pain during periods")
+print("N: No any Symptoms")
+
+s = input("Symptom:")
+
+w = float(input("Your Body weight in kg: "))
+
+g = input("Your Gender: ")
+
+
+Fever1 = "You are advised to take: #Paracetamol: 1 Tab  TDPC x 3 Days."
+fever1 = "You are advised to take: #Paracetamol: 1 Tab TDPC  x 3 Days."
+Fever2 = "You are advised to take: #Antibiotic: 1 Tab  BDPC x 3 Days."
+fever2 = "You are advised to take: #Antibiotic: 1 Tab BDPC  x 3 Days."
+sneezing1 = "You are advised to take: #Cetrazine : 1 Tab ODHS x 5 Days."
+sneezing2 = "You are advised to take: #Cetrazine : 1 Tab ODHS x 5 Days."
+sneezing3 = "You are advised to take: #Montek : 1 Tab ODHS x 7 Days."
+headache1 = "You are advised to take: #Sibelium 10: 1 Tab ODHS x 4 Weeks."
+headache2 = "You are advised to take: #Naxdom 500: 1 Tab OD (SOS)."
+headache3 = "You are advised to take: #Steam Inhalation with Carvol Plus Twice Daily."
+drycough1 = "You are advised to take: #Montair fx: 1 Tab ODHS x 7 Days."
+Drycough2 = "You are advised to take: #Grilinctus Syr: 7.5ml TDS x 5 Days."
+drycough2 = "You are advised to take: #Grilinctus Syr: 5 ml TDS x 5 Days."
+Mucusc1 = "You are advised to take: #Ascoril LS: 7.5ml 7.5ml TDS x 5 Days."
+mucusc1 = "You are advised to take: #Ascoril LS: 5ml TDS x 5 Days."
+Mucusc2 = "You are advised to take: #Ascoril Plus: 7.5ml TDS x 5 Days."
+mucusc2 = "You are advised to take: #Ascoril Plus: 5ml TDS x 5 Days."
+Mucusc3 = "You are advised to take: #Ascoril SF: 7.5ml TDS x 5 Days."
+mucusc3 = "You are advised to take: #Ascoril SF: 5 ml TDS x 5 Days."
+if s == "A" and w >= 50:
+    T = float(input("Temperature in Celcius: "))
+    if T >= 110:
+        print("You entered an invalid temprature")
+    elif T >= 98.4:
+        print(Fever1)
+    else:
+        print("No need of any medicine, Lead a happy life with all other family members. Thank You")
+
+elif s == "A" or "a" and w <= 50:
+
+    T = float(input("Temperature in Fahrenheit: "))
+    if T >= 110:
+        print("You entered an invalid temprature")
+    elif T >= 98.4:
+        print(fever1)
+    else:
+        print("No need of any medicine, Lead a happy life with all other family members. Thank You")
+elif s == ("b" or "B") and w >= 50:
+    print(sneezing1)
+elif s == ("b" or "B") and w <= 50:
+    print(sneezing2)
+
+
+elif s == 'A,B' or "a,b" and w >= 50:
+
+    T = float(input("Temperature in Fahrenheit: "))
+    if T >= 110:
+        print("You entered an invalid temprature")
+    elif T >= 98.4:
+        print(Fever1, '\n', sneezing1)
+    else:
+        print(sneezing1)
+
+elif s == "A,B" or "a,b" and w <= 50:
+
+    T = float(input("Temperature in Fahrenheit: "))
+    if T >= 110:
+        print("You entered an invalid temprature")
+    elif T >= 98.4:
+        print(fever1, '\n', sneezing2)
+    else:
+        print(sneezing2)
+
+
+elif s == 'C' or "c" and w >= 50:
+    T = float(input("Temperature in Ferenhite: "))
+    if T >= 110:
+        print("You entered an invalid temprature")
+    elif T >= 98.4:
+        print(Fever1, '\n', headache3)
+    else:
+        print(Fever2, '\n', headache3)
+elif s == "C" or "c" and w <= 50:
+
+    T = float(input("Temperature in Ferenhite: "))
+    if T >= 110:
+        print("You entered an invalid temprature")
+        print("Try Again; ")
+
+    elif T >= 98.4:
+        print(fever1, '\n', headache3)
+    else:
+        print(fever2, '\n', headache3)
+
+
+
+else:
+
+    print("No need of any medicine, Lead a happy life with all your family members. Thank You")
